@@ -17,7 +17,7 @@
             &nbsp;&nbsp;&nbsp;
             <asp:DropDownList ID="courseNumberDropDownList" runat="server"></asp:DropDownList>
             &nbsp;&nbsp;&nbsp;
-            <asp:Button ID="addCourseButton" runat="server" Text="Add Course" />
+            <asp:Button ID="addCourseButton" runat="server" Text="Add Course" OnClick="addCourseButton_Click" />
         </p>
 
         <p>
@@ -27,7 +27,17 @@
         </p>
 
         <p>
+            Schedule slots remaining:
+            &nbsp;&nbsp;&nbsp;
+            <asp:Label ID="coursesRemainingLabel" runat="server" Text="4"></asp:Label>
+        </p>
+
+        <p>
             <asp:Button ID="scheduleCoursesButton" runat="server" Text="Schedule Courses" Enabled="False" />
+        </p>
+
+        <p>
+            <asp:Label ID="errorLabel" runat="server" Text="" ForeColor="Red"></asp:Label>
         </p>
     
     </div>

@@ -125,7 +125,7 @@
     <Compile Include="Scheduling.aspx.designer.cs">
       <DependentUpon>Scheduling.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Section.cs" />
+    <Compile Include="Course.cs" />
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup>

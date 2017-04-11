@@ -5,14 +5,14 @@ using System.Web;
 
 namespace FoxBraydonProject4
 {
-    public class Section
+    public class Course
     {
         string days;
         int startTime;
         int endTime;
         int sectionNumber;
 
-        public Section(string d, int start, int end, int number)
+        public Course(string d, int start, int end, int number)
         {
             days = d;
             startTime = start;

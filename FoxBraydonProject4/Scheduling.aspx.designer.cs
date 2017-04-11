@@ -49,6 +49,15 @@ namespace FoxBraydonProject4 {
         protected global::System.Web.UI.WebControls.Label selectedCoursesLabel;
         
         /// <summary>
+        /// coursesRemainingLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label coursesRemainingLabel;
+        
+        /// <summary>
         /// scheduleCoursesButton control.
         /// </summary>
         /// <remarks>
@@ -56,5 +65,14 @@ namespace FoxBraydonProject4 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button scheduleCoursesButton;
+        
+        /// <summary>
+        /// errorLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label errorLabel;
     }
 }
