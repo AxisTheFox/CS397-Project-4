@@ -163,6 +163,8 @@ namespace FoxBraydonProject4
             setCourseDays();
             setCourseStartTimes();
             setCourseEndTimes();
+
+            scheduleCoursesFromBeginning();
         }
 
         private void setCourses()
@@ -219,6 +221,11 @@ namespace FoxBraydonProject4
             course2EndTimes = Session["course2EndTimes"].ToString().Split(',');
             course3EndTimes = Session["course3EndTimes"].ToString().Split(',');
             course4EndTimes = Session["course4EndTimes"].ToString().Split(',');
+        }
+
+        private void scheduleCoursesFromBeginning()
+        {
+
         }
     }
 }
