@@ -10,6 +10,41 @@ namespace FoxBraydonProject4
 {
     public partial class Scheduling : System.Web.UI.Page
     {
+        string course1;
+        string course2;
+        string course3;
+        string course4;
+
+        string[] course1Crns;
+        string[] course2Crns;
+        string[] course3Crns;
+        string[] course4Crns;
+
+        string[] course1CourseNumbers;
+        string[] course2CourseNumbers;
+        string[] course3CourseNumbers;
+        string[] course4CourseNumbers;
+
+        string[] course1Sections;
+        string[] course2Sections;
+        string[] course3Sections;
+        string[] course4Sections;
+
+        string[] course1Days;
+        string[] course2Days;
+        string[] course3Days;
+        string[] course4Days;
+
+        string[] course1StartTimes;
+        string[] course2StartTimes;
+        string[] course3StartTimes;
+        string[] course4StartTimes;
+
+        string[] course1EndTimes;
+        string[] course2EndTimes;
+        string[] course3EndTimes;
+        string[] course4EndTimes;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -78,7 +113,7 @@ namespace FoxBraydonProject4
             qc.createDatabaseCommand("Select * from Schedule where CourseNumber=@cn");
             qc.addQueryParameter("@cn", courseNumberDropDownList.SelectedValue.ToString());
             Session[course] = courseNumberDropDownList.SelectedValue.ToString();
-            Session[course + "referenceNumbers"] = "";
+            Session[course + "crns"] = "";
             Session[course + "courseNumbers"] = "";
             Session[course + "sections"] = "";
             Session[course + "days"] = "";
@@ -117,6 +152,73 @@ namespace FoxBraydonProject4
             {
                 selectedCoursesLabel.Text += ", " + Session[course].ToString();
             }
+        }
+
+        protected void scheduleCoursesButton_Click(object sender, EventArgs e)
+        {
+            setCourses();
+            setCourseCrns();
+            setCourseNumbers();
+            setCourseSections();
+            setCourseDays();
+            setCourseStartTimes();
+            setCourseEndTimes();
+        }
+
+        private void setCourses()
+        {
+            course1 = Session["course1"].ToString();
+            course2 = Session["course2"].ToString();
+            course3 = Session["course3"].ToString();
+            course4 = Session["course4"].ToString();
+        }
+
+        private void setCourseCrns()
+        {
+            course1Crns = Session["course1crns"].ToString().Split(',');
+            course2Crns = Session["course2crns"].ToString().Split(',');
+            course3Crns = Session["course3crns"].ToString().Split(',');
+            course4Crns = Session["course4crns"].ToString().Split(',');
+        }
+
+        private void setCourseNumbers()
+        {
+            course1CourseNumbers = Session["course1courseNumbers"].ToString().Split(',');
+            course2CourseNumbers = Session["course2courseNumbers"].ToString().Split(',');
+            course3CourseNumbers = Session["course3courseNumbers"].ToString().Split(',');
+            course4CourseNumbers = Session["course4courseNumbers"].ToString().Split(',');
+        }
+
+        private void setCourseSections()
+        {
+            course1Sections = Session["course1sectionNumbers"].ToString().Split(',');
+            course2Sections = Session["course2sectionNumbers"].ToString().Split(',');
+            course3Sections = Session["course3sectionNumbers"].ToString().Split(',');
+            course4Sections = Session["course4sectionNumbers"].ToString().Split(',');
+        }
+
+        private void setCourseDays()
+        {
+            course1Days = Session["course1days"].ToString().Split(',');
+            course2Days = Session["course2days"].ToString().Split(',');
+            course3Days = Session["course3days"].ToString().Split(',');
+            course4Days = Session["course4days"].ToString().Split(',');
+        }
+
+        private void setCourseStartTimes()
+        {
+            course1StartTimes = Session["course1startTimes"].ToString().Split(',');
+            course2StartTimes = Session["course2startTimes"].ToString().Split(',');
+            course3StartTimes = Session["course3startTimes"].ToString().Split(',');
+            course4StartTimes = Session["course4startTimes"].ToString().Split(',');
+        }
+
+        private void setCourseEndTimes()
+        {
+            course1EndTimes = Session["course1EndTimes"].ToString().Split(',');
+            course2EndTimes = Session["course2EndTimes"].ToString().Split(',');
+            course3EndTimes = Session["course3EndTimes"].ToString().Split(',');
+            course4EndTimes = Session["course4EndTimes"].ToString().Split(',');
         }
     }
 }

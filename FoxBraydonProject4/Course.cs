@@ -19,13 +19,5 @@ namespace FoxBraydonProject4
             endTime = end;
             sectionNumber = number;
         }
-
-        //public bool overlaps(Section otherSection)
-        //{
-        //    // check days
-        //    // if days are different, return false
-        //    // if at least one day is common, check times
-        //    // return either true or false.
-        //}
     }
 }
